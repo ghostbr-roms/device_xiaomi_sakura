@@ -2694,6 +2694,12 @@ vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
+# Power Hal
+vendor/bin/hw/android.hardware.power@1.1-service-qti
+vendor/etc/init/android.hardware.power@1.1-service-qti.rc
+vendor/lib/hw/power.default.so
+vendor/lib64/hw/power.default.so
+
 # Power-off alarm - from sakura
 framework/vendor.qti.hardware.alarm-V1.0-java.jar
 -vendor/app/PowerOffAlarm/PowerOffAlarm.apk
