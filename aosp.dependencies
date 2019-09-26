@@ -1,13 +1,13 @@
 [
    {
-   "repository": "vendor_xiaomi_sakura",
-   "target_path": "vendor/xiaomi/sakura",
+   "repository": "vendor_xiaomi_daisy",
+   "target_path": "vendor/xiaomi/daisy",
    "branch": "pie"
  },
     {
    "repository": "kernel_xiaomi_msm8953",
    "target_path": "kernel/xiaomi/msm8953",
-   "branch": "pie_sakura"
+   "branch": "pie_daisy"
  },
  {
    "repository": "android_packages_resources_devicesettings",
