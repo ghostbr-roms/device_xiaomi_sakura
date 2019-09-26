@@ -17,31 +17,28 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product-if-exists, vendor/xiaomi/MiuiCamera/sakura.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/MiuiCamera/daisy.mk)
 
 # Inherit from sakura device
-$(call inherit-product, device/xiaomi/sakura/device.mk)
+$(call inherit-product, device/xiaomi/daisy/device.mk)
 
 # Inherit some common AOSP stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
-CUSTOM_BUILD_TYPE := OFFICIAL
+CUSTOM_BUILD_TYPE := UNOFFICIAL
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := sakura
-PRODUCT_NAME := aosp_sakura
+PRODUCT_DEVICE := daisy
+PRODUCT_NAME := aosp_daisy
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi 6 Pro
+PRODUCT_MODEL := MI A2 Lite 
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
 BOARD_VENDOR := Xiaomi
 
-BUILD_FINGERPRINT := "xiaomi/sakura_india/sakura_india:9/PKQ1.180917.001/9.4.18:user/release-keys"
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop	
+BUILD_FINGERPRINT := "xiaomi/daisy/daisy_sprout:9/PKQ1.180917.001/V10.0.14.0.PDLMIXM:user/release-keys"
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="sakura_india-user 9 PKQ1.180917.001 9.4.18 release-keys" \
-    PRODUCT_NAME="sakura_india" \
-    TARGET_DEVICE="sakura_india"
-
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+TARGET_SCREEN_WIDTH := 2280
+TARGET_SCREEN_HEIGHT := 1080
